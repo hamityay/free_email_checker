@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "free_email_checker"
   spec.version       = FreeEmailChecker::VERSION
   spec.authors       = ["Hamit YAY"]
-  spec.email         = ["info@hamityay.com"]
+  spec.email         = ["hamityay@hotmail.com"]
   spec.add_runtime_dependency "resolv-ipv6favor",
     ["= 0.0.0"]
 

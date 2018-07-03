@@ -26,12 +26,20 @@ Or install it yourself as:
 
 ## Usage
 
-$ result = FreeEmailChecker.check("some_name@hotmail.com")
+    $ require 'free_email_checker'
+    $ result = FreeEmailChecker.check("some_name@hotmail.com")
 
 'result' is a Hash class it contains :free, :domain, :status keys and correspondence values.
 
-```result
+```ruby
 {:free=>true, :domain=>false, :status=>"some_name@hotmail.com found in free email provider list."}
+
+```
+    $ result = FreeEmailChecker.check("some_name@github.com")
+
+```ruby
+{:free=>false, :domain=>true, :status=>"Found ip address(es) for github.com 192.30.253.113, 192.30.253.112, "}
+
 ```
 
 ## Development
@@ -42,7 +50,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/free_email_checker. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/hamityay/free_email_checker. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 

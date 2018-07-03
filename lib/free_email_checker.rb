@@ -13,13 +13,13 @@ module FreeEmailChecker
         check[:status] = "#{email} found in free email provider list."
       else
         require 'resolv-ipv6favor'
-        a  = Resolv::DNS::Resource::IN::A
-        response = Resolv::DNS.new.getresources(w, a)
+        mx = Resolv::DNS::Resource::IN::MX
+        response = Resolv::DNS.new.getresources(w, mx)
         if response.size > 0
           check[:domain] = true
-          t = "Found ip address(es) for #{w} "
+          t = "Found mx record(s) for #{w}; "
           response.each do |r|
-            t = t.concat(r.address.to_s + ", ")
+            t = t.concat(r.exchange.to_s + ", ")
           end
           check[:status] = t
         else

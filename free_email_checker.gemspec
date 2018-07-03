@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
     ["= 0.0.0"]
 
   spec.summary       = %q{Free Email Check}
-  spec.description   = %q{Checks an email is free account than if its not gives domain ip address(if present).}
+  spec.description   = %q{Checks an email is free account than if its not gives domain mx records(if present).}
   spec.homepage      = "https://rubygems.org/gems/free_email_checker"
   spec.metadata      = { "source_code_uri" => "https://github.com/hamityay/free_email_checker" }
   spec.license       = "MIT"
